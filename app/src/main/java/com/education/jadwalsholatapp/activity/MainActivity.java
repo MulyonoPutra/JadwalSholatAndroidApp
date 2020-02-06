@@ -3,7 +3,6 @@ package com.education.jadwalsholatapp.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.education.jadwalsholatapp.R;
 import com.education.jadwalsholatapp.adapter.CityListAdapter;
 import com.education.jadwalsholatapp.listener.OnClickCityListener;
@@ -21,9 +19,7 @@ import com.education.jadwalsholatapp.model.CityModel;
 import com.education.jadwalsholatapp.model.ResponseCityModel;
 import com.education.jadwalsholatapp.retrofit.JadwalSholatService;
 import com.education.jadwalsholatapp.retrofit.RetrofitUtils;
-
 import java.util.ArrayList;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -42,10 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnClickCityListen
 
         recyclerView = (RecyclerView) findViewById(R.id.list_city);
 
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -67,9 +60,7 @@ public class MainActivity extends AppCompatActivity implements OnClickCityListen
                 Log.e("Retrofit Get", t.toString());
             }
         });
-
     }
-
 
     @Override
     public void onCityClicked(String id, String name) {
@@ -77,6 +68,5 @@ public class MainActivity extends AppCompatActivity implements OnClickCityListen
         intent.putExtra("city_id",id); /* melempar data ke Detail Activity */
         intent.putExtra("city_name", name);
         startActivity(intent);
-        //Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
     }
 }

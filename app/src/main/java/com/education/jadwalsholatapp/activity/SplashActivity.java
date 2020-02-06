@@ -16,8 +16,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                // langsung pindah ke MainActivity atau activity lain
-                // begitu memasuki splash screen ini
+                /* Move to Main Activity or other Activity when go to this splash screen */
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

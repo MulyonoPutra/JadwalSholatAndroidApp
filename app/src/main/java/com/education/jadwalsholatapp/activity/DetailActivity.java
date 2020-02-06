@@ -128,7 +128,6 @@ public class DetailActivity extends AppCompatActivity implements DatePickerDialo
                     Date magribDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getMaghrib());
                     Date isyaDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getIsya());
 
-
                     if (currrenTime.before(subuhDate)){
                         shubuhText.setTextColor(Color.RED);
                     }else if(currrenTime.before(dzuhurDate)){
@@ -142,13 +141,9 @@ public class DetailActivity extends AppCompatActivity implements DatePickerDialo
                     }else{
                         shubuhText.setTextColor(Color.RED);
                     }
-
-
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
-
             }
 
             @Override
