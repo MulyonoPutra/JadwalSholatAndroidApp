@@ -10,9 +10,11 @@ import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.education.jadwalsholatapp.R;
 import com.education.jadwalsholatapp.activity.MainActivity;
 import com.education.jadwalsholatapp.adapter.CityListAdapter;
@@ -22,11 +24,13 @@ import com.education.jadwalsholatapp.model.ResponseCityModel;
 import com.education.jadwalsholatapp.model.ResponseDetailModel;
 import com.education.jadwalsholatapp.retrofit.JadwalSholatService;
 import com.education.jadwalsholatapp.retrofit.RetrofitUtils;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -122,23 +126,23 @@ public class DetailActivity extends AppCompatActivity implements DatePickerDialo
 
                     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
-                    Date subuhDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getSubuh());
-                    Date dzuhurDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getDzuhur());
-                    Date asharDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getAshar());
-                    Date magribDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getMaghrib());
-                    Date isyaDate = dateFormat.parse(dateString+" "+responseDetailModel.getJadwal().getData().getIsya());
+                    Date subuhDate = dateFormat.parse(dateString + " " + responseDetailModel.getJadwal().getData().getSubuh());
+                    Date dzuhurDate = dateFormat.parse(dateString + " " + responseDetailModel.getJadwal().getData().getDzuhur());
+                    Date asharDate = dateFormat.parse(dateString + " " + responseDetailModel.getJadwal().getData().getAshar());
+                    Date magribDate = dateFormat.parse(dateString + " " + responseDetailModel.getJadwal().getData().getMaghrib());
+                    Date isyaDate = dateFormat.parse(dateString + " " + responseDetailModel.getJadwal().getData().getIsya());
 
-                    if (currrenTime.before(subuhDate)){
+                    if (currrenTime.before(subuhDate)) {
                         shubuhText.setTextColor(Color.RED);
-                    }else if(currrenTime.before(dzuhurDate)){
+                    } else if (currrenTime.before(dzuhurDate)) {
                         dzuhurText.setTextColor(Color.RED);
-                    }else if(currrenTime.before(asharDate)){
+                    } else if (currrenTime.before(asharDate)) {
                         asharText.setTextColor(Color.RED);
-                    }else if(currrenTime.before(magribDate)){
+                    } else if (currrenTime.before(magribDate)) {
                         magribText.setTextColor(Color.RED);
-                    }else if(currrenTime.before(isyaDate)){
+                    } else if (currrenTime.before(isyaDate)) {
                         isyaText.setTextColor(Color.RED);
-                    }else{
+                    } else {
                         shubuhText.setTextColor(Color.RED);
                     }
                 } catch (ParseException e) {

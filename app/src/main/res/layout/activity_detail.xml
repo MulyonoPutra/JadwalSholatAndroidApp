@@ -1,200 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:exported="true"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/date_text"
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
         android:text="Rabu, 28 January 2020"
-        android:layout_margin="20dp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/buttonDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Open Date Picker"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="90dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
         android:radius="1000dp"
         android:shape="rectangle"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/white"/>
+        android:text="Open Date Picker"
+        android:textColor="@color/white" />
 
 
     <TextView
         android:id="@+id/city_name"
-        android:textColor="@android:color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
         android:text="Jakarta"
-        android:layout_margin="20dp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <ProgressBar
-        android:layout_marginTop="150dp"
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp" />
 
     <LinearLayout
-        android:padding="20dp"
         android:id="@+id/jadwal_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="20dp"
         android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="left"
+                android:text="Subuh:  "
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Subuh:  "/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/shubuh_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="center"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="left"
+                android:text="Dzuhur:  "
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Dzuhur:  "/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dzuhur_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="center"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
-            >
+            android:layout_marginTop="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="left"
+                android:text="Ashar:  "
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Ashar:  "/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/ashar_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="center"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="left"
+                android:text="Magrib:  "
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Magrib:  "/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/magrib_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="center"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="left"
+                android:text="Isya:  "
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Isya:  "/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/isya_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:fontFamily="Trebuchet MS"
+                android:gravity="center"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>
